@@ -1,6 +1,4 @@
 1. 
-index.html
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +16,6 @@ index.html
 
 
 2. 
-index.html
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,7 +48,6 @@ let myUndefined
 let myNull = null
 
 5.
-index.html
 <!DOCTYPE html>
 <html>
 <head>
