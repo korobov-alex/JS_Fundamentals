@@ -112,7 +112,14 @@ function findUnique(arr) {
   }
 }
 
+//Або можна через Set, що, наче як, має працювати швидше ( O(n) якщо через Сет ----> O(n log n) якщо через сорт )
+function findUniqueSet(arr) {
+  const uniqueSet = new Set(arr);
+  return arr.length === uniqueSet.size;
+}
+
 console.log(findUnique([1, 2, 3, 5, 11, 1]));
+console.log(findUniqueSet([1, 2, 3, 5, 11, 1]));
 
 8;
 function create(name) {
