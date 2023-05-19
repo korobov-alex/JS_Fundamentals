@@ -41,11 +41,13 @@ first = second
 console.log(first, second)
 
 4.
-let string = "Oleksandr"
-let number = 28
-let boolean = true
-let myUndefined
-let myNull = null
+let object = {
+  string : "Oleksandr",
+  number : 28,
+  boolean : true,
+  myUndefined : undefined,
+  myNull : null
+}
 
 5.
 <!DOCTYPE html>
