@@ -1,6 +1,6 @@
 1;
 function trueOrFalse(a, b, c) {
-  if (a < b < c) {
+  if (a < b && b < c) {
     return true;
   } else {
     return false;
