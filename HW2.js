@@ -37,11 +37,20 @@ if (isAdult >= 18) {
 
 4;
 function maxAndReplace(arr) {
-  const maxValue = [Math.max(...arr)];
-  return arr.filter((num) => num !== maxValue[0]);
+  const count = {};
+  arr.forEach(element => {
+    count[element] = (count[element] || 0) + 1;
+  });
+  
+  const values = Object.entries(count);
+  const newArr = [].concat(...values);
+  const maxValues = newArr.filter(item => typeof item === 'number');
+  const maxValue = Math.max(...maxValues);
+  const result = [Number(newArr[newArr.indexOf(maxValue) - 1])];
+  return arr.filter(num => num !== result[0]);
 }
 
-console.log(maxAndReplace([4, 5, 2, 1, 5, 3, 5, 2, 5]));
+console.log(maxAndReplace([4, 5, 2, 1, 6, 5, 3, 5, 2, 5]))
 
 5;
 function triangleSqrt() {
