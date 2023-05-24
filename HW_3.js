@@ -25,7 +25,7 @@ function repeatNumber(a, b) {
   } else {
     let counter = 1;
     for (let i = a; i <= b; i++) {
-      while (counter <= i) {
+      while (counter < i) {
         console.log(i);
         counter++;
       }
