@@ -102,22 +102,31 @@ function showMonthName(month) {
 showMonthName(3);
 
 5;
-function showUserId(id) {
-  try {
-    id.forEach((element) => {
-      if (element < 0) {
-        throw new RangeError("Incorrect Id!");
-      }
-    });
-  } catch (error) {
-    console.log(error.stack);
-  } finally {
-    let newId = id.filter((item) => item > 0);
-    let arrayOfObjects = newId.map((element, index) => {
-      return { id: "id", value: element };
-    });
-    return arrayOfObjects;
-  }
+function showUser(id) {
+    try {
+        if (id < 0) {
+            throw new RangeError(`Error: ID must not be negative: ${id}`);
+        } else {
+            return { "id": id };
+        }
+    } catch (error) {
+        console.log(error.stack);
+    }
+}
+
+function showUsers(ids) {
+    let validIds = [];
+    try {
+        ids.forEach((element) => {
+            let checkedIds = showUser(element);
+            if(element > 0){
+                validIds.push(checkedIds);
+            }
+        });
+        return validIds;
+    } catch (error) {
+        console.log(error.stack);
+    }
 }
 
 console.log(showUserId([7, -12, 44, 22]));
